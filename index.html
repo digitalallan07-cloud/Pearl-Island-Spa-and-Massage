@@ -1,0 +1,2755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pearl Island Spa Massage | Luxury Massage & Spa in Dubai</title>
+  <meta name="description" content="Pearl Island Spa Massage – Dubai's premier luxury spa offering full body relaxation, Thai massage, deep tissue, aromatherapy, hot stone, couples massage and more. Book now on WhatsApp.">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    /* ============================================
+       CSS CUSTOM PROPERTIES
+       ============================================ */
+    :root {
+      --cream: #FAF7F2;
+      --cream-dark: #F0EBE3;
+      --gold: #C9A96E;
+      --gold-light: #D4BA8A;
+      --gold-dark: #B08D4F;
+      --lavender: #D4C5E2;
+      --lavender-light: #EDE6F5;
+      --pink: #E8C4C4;
+      --pink-light: #F5E1E1;
+      --charcoal: #2C2C2C;
+      --charcoal-light: #4A4A4A;
+      --black: #1A1A1A;
+      --white: #FFFFFF;
+      --off-white: #F8F6F3;
+      --font-heading: 'Playfair Display', Georgia, serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+      --shadow-md: 0 4px 20px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+      --shadow-xl: 0 16px 60px rgba(0,0,0,0.15);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--charcoal);
+      background: var(--cream);
+      line-height: 1.7;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; transition: var(--transition); }
+    ul { list-style: none; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-header .section-label {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .section-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 500;
+      color: var(--charcoal);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      font-size: 1.05rem;
+      color: var(--charcoal-light);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .section-divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      margin: 20px auto 0;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 36px;
+      border-radius: 50px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201,169,110,0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+    }
+
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(201,169,110,0.3);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: var(--white);
+    }
+
+    .btn-whatsapp:hover {
+      background: #1EBE57;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(37,211,102,0.4);
+    }
+
+    /* Scroll animations */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal-left.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .reveal-right.active {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* ============================================
+       HEADER / NAVIGATION
+       ============================================ */
+    .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 18px 0;
+      transition: var(--transition);
+    }
+
+    .header.scrolled {
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(20px);
+      padding: 12px 0;
+      box-shadow: 0 2px 20px rgba(0,0,0,0.08);
+    }
+
+    .header .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      z-index: 1001;
+    }
+
+    .logo-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .logo-text {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.2;
+      transition: var(--transition);
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.65rem;
+      font-family: var(--font-body);
+      font-weight: 400;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      opacity: 0.8;
+    }
+
+    .header.scrolled .logo-text {
+      color: var(--charcoal);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: rgba(255,255,255,0.85);
+      position: relative;
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--gold);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .header.scrolled .nav-links a {
+      color: var(--charcoal-light);
+    }
+
+    .header.scrolled .nav-links a:hover {
+      color: var(--charcoal);
+    }
+
+    .nav-book-btn {
+      padding: 10px 24px !important;
+      font-size: 0.85rem !important;
+    }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      z-index: 1001;
+      padding: 4px;
+    }
+
+    .hamburger span {
+      width: 24px;
+      height: 2px;
+      background: var(--white);
+      transition: var(--transition);
+    }
+
+    .header.scrolled .hamburger span {
+      background: var(--charcoal);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translateY(7px) translateX(4px);
+    }
+
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translateY(-7px) translateX(4px);
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(26,26,26,0.98);
+      backdrop-filter: blur(20px);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--white);
+      opacity: 0.8;
+      transition: var(--transition);
+    }
+
+    .mobile-menu a:hover {
+      opacity: 1;
+      color: var(--gold);
+    }
+
+    /* ============================================
+       HERO SECTION
+       ============================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background:
+        linear-gradient(180deg, rgba(26,26,26,0.4) 0%, rgba(26,26,26,0.5) 50%, rgba(26,26,26,0.7) 100%),
+        url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1920&q=80') center/cover no-repeat;
+      transform: scale(1.05);
+      transition: transform 8s ease;
+    }
+
+    .hero:hover .hero-bg {
+      transform: scale(1);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: var(--white);
+      max-width: 900px;
+      padding: 0 24px;
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeInUp 1s 0.3s forwards;
+    }
+
+    .hero-content h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeInUp 1s 0.5s forwards;
+    }
+
+    .hero-content h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .hero-subtitle {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-weight: 300;
+      line-height: 1.7;
+      opacity: 0.85;
+      max-width: 650px;
+      margin: 0 auto 40px;
+      opacity: 0;
+      animation: fadeInUp 1s 0.7s forwards;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+      opacity: 0;
+      animation: fadeInUp 1s 0.9s forwards;
+    }
+
+    .hero-highlights {
+      display: flex;
+      gap: 48px;
+      justify-content: center;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeInUp 1s 1.1s forwards;
+    }
+
+    .hero-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 400;
+      opacity: 0.8;
+    }
+
+    .hero-highlight-item i {
+      color: var(--gold-light);
+      font-size: 1.1rem;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: rgba(255,255,255,0.5);
+      font-size: 0.7rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    .hero-scroll .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* ============================================
+       ABOUT SECTION
+       ============================================ */
+    .about {
+      background: var(--white);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 12px;
+      transition: transform 0.6s ease;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.03);
+    }
+
+    .about-image-badge {
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
+      background: var(--gold);
+      color: var(--white);
+      padding: 16px 24px;
+      border-radius: 12px;
+      text-align: center;
+      font-family: var(--font-heading);
+    }
+
+    .about-image-badge .badge-number {
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .about-image-badge .badge-text {
+      font-size: 0.7rem;
+      font-family: var(--font-body);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .about-content .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .about-content h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 500;
+      color: var(--charcoal);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      font-size: 1rem;
+      color: var(--charcoal-light);
+      margin-bottom: 32px;
+      line-height: 1.8;
+    }
+
+    .about-features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 36px;
+    }
+
+    .about-feature {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .about-feature-icon {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      border-radius: 12px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1.2rem;
+    }
+
+    .about-feature h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .about-feature p {
+      font-size: 0.9rem;
+      margin-bottom: 0;
+      line-height: 1.6;
+    }
+
+    /* ============================================
+       TREATMENTS SECTION
+       ============================================ */
+    .treatments {
+      background: var(--cream);
+    }
+
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    .treatment-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .treatment-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .treatment-card-image {
+      height: 220px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .treatment-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .treatment-card:hover .treatment-card-image img {
+      transform: scale(1.08);
+    }
+
+    .treatment-badge {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      background: var(--gold);
+      color: var(--white);
+      padding: 5px 14px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .treatment-card-content {
+      padding: 28px;
+    }
+
+    .treatment-card-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--charcoal);
+    }
+
+    .treatment-card-content p {
+      font-size: 0.9rem;
+      color: var(--charcoal-light);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .treatment-duration {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ============================================
+       PRICING SECTION
+       ============================================ */
+    .pricing {
+      background: var(--black);
+      color: var(--white);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=1920&q=60') center/cover no-repeat;
+      opacity: 0.07;
+    }
+
+    .pricing .section-header h2 { color: var(--white); }
+    .pricing .section-header p { color: rgba(255,255,255,0.6); }
+
+    .pricing-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .pricing-category {
+      margin-bottom: 48px;
+    }
+
+    .pricing-category:last-child { margin-bottom: 0; }
+
+    .pricing-category-title {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--gold-light);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .pricing-items {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .pricing-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 24px;
+      border-radius: 10px;
+      transition: var(--transition);
+    }
+
+    .pricing-item:hover {
+      background: rgba(255,255,255,0.05);
+    }
+
+    .pricing-item.featured {
+      background: rgba(201,169,110,0.12);
+      border: 1px solid rgba(201,169,110,0.25);
+    }
+
+    .pricing-item-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .pricing-item-name {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--white);
+    }
+
+    .pricing-item-duration {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.4);
+      font-weight: 400;
+    }
+
+    .pricing-item-recommend {
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(201,169,110,0.15);
+      padding: 4px 10px;
+      border-radius: 50px;
+    }
+
+    .pricing-item-price {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold-light);
+      white-space: nowrap;
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      position: relative;
+      z-index: 1;
+    }
+
+    .pricing-note a {
+      color: var(--gold-light);
+      text-decoration: underline;
+    }
+
+    /* ============================================
+       OFFERS SECTION
+       ============================================ */
+    .offers {
+      background: var(--white);
+    }
+
+    .offers-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .offer-card {
+      background: linear-gradient(135deg, var(--cream) 0%, var(--cream-dark) 100%);
+      border-radius: 16px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .offer-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .offer-card::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: rgba(201,169,110,0.1);
+    }
+
+    .offer-tag {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--white);
+      padding: 5px 16px;
+      border-radius: 50px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .offer-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+    }
+
+    .offer-card p {
+      font-size: 0.95rem;
+      color: var(--charcoal-light);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .offer-card .offer-conditions {
+      font-size: 0.8rem;
+      color: var(--charcoal-light);
+      opacity: 0.7;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    /* ============================================
+       GALLERY SECTION
+       ============================================ */
+    .gallery {
+      background: var(--cream);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto;
+      gap: 16px;
+    }
+
+    .gallery-item {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      aspect-ratio: 1;
+    }
+
+    .gallery-item:nth-child(1) {
+      grid-row: span 2;
+      aspect-ratio: auto;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(26,26,26,0.3);
+      opacity: 0;
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-overlay i {
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.92);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 85vh;
+      border-radius: 8px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 24px;
+      right: 32px;
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: var(--transition);
+    }
+
+    .lightbox-close:hover { opacity: 1; }
+
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--white);
+      font-size: 2rem;
+      cursor: pointer;
+      opacity: 0.6;
+      padding: 20px;
+      transition: var(--transition);
+    }
+
+    .lightbox-nav:hover { opacity: 1; }
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+
+    /* ============================================
+       SOCIAL MEDIA STRIP SECTION
+       ============================================ */
+    .social-strip {
+      background: var(--black);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .social-strip-header {
+      text-align: center;
+      margin-bottom: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .social-strip-header .section-label {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .social-strip-header h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      color: var(--white);
+      font-weight: 400;
+    }
+
+    .social-reel {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      padding: 0 40px 20px;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .social-reel::-webkit-scrollbar { display: none; }
+
+    .social-reel-item {
+      flex: 0 0 380px;
+      height: 480px;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      scroll-snap-align: start;
+      cursor: pointer;
+    }
+
+    .social-reel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease, filter 0.4s ease;
+    }
+
+    .social-reel-item:hover img {
+      transform: scale(1.06);
+      filter: brightness(0.7);
+    }
+
+    .social-reel-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 60px 24px 24px;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 100%);
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .social-reel-item:hover .social-reel-overlay {
+      opacity: 1;
+    }
+
+    .social-reel-overlay i {
+      color: var(--white);
+      font-size: 1.5rem;
+    }
+
+    .social-handle {
+      text-align: center;
+      margin-top: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .social-handle a {
+      font-family: var(--font-heading);
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+      color: var(--white);
+      font-weight: 400;
+      font-style: italic;
+      letter-spacing: 2px;
+      opacity: 0.7;
+      transition: var(--transition);
+      display: inline-block;
+    }
+
+    .social-handle a:hover {
+      opacity: 1;
+      color: var(--gold-light);
+      transform: scale(1.02);
+    }
+
+    /* ============================================
+       TESTIMONIALS SECTION
+       ============================================ */
+    .testimonials {
+      background: linear-gradient(135deg, var(--cream) 0%, var(--lavender-light) 100%);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+    }
+
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 36px;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .testimonial-quote-icon {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--gold-light);
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.5;
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-stars i {
+      color: var(--gold);
+      font-size: 0.85rem;
+    }
+
+    .testimonial-card p {
+      font-size: 1rem;
+      color: var(--charcoal-light);
+      line-height: 1.8;
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .testimonial-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+    }
+
+    .testimonial-author-info h4 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .testimonial-author-info span {
+      font-size: 0.8rem;
+      color: var(--charcoal-light);
+    }
+
+    /* ============================================
+       LOCATION SECTION
+       ============================================ */
+    .location {
+      background: var(--white);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .location-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 24px;
+      color: var(--charcoal);
+    }
+
+    .location-details {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+
+    .location-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .location-detail i {
+      width: 40px;
+      height: 40px;
+      min-width: 40px;
+      border-radius: 10px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .location-detail div h4 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .location-detail div p {
+      font-size: 0.9rem;
+      color: var(--charcoal-light);
+    }
+
+    .map-container {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    /* ============================================
+       CONTACT / BOOKING SECTION
+       ============================================ */
+    .contact {
+      background: var(--cream);
+      position: relative;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-left h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .contact-left > p {
+      font-size: 1rem;
+      color: var(--charcoal-light);
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 24px;
+      background: var(--white);
+      border-radius: 12px;
+      transition: var(--transition);
+    }
+
+    .contact-method:hover {
+      transform: translateX(6px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-method i {
+      width: 44px;
+      height: 44px;
+      min-width: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .contact-method.whatsapp i { background: #E7F9EF; color: #25D366; }
+    .contact-method.phone i { background: #E8F0FE; color: #4285F4; }
+    .contact-method.email i { background: #FDE8E8; color: #EA4335; }
+
+    .contact-method div h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .contact-method div p {
+      font-size: 0.9rem;
+      color: var(--charcoal-light);
+    }
+
+    .contact-hours {
+      padding: 20px 24px;
+      background: var(--white);
+      border-radius: 12px;
+      border-left: 3px solid var(--gold);
+    }
+
+    .contact-hours h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .contact-hours p {
+      font-size: 0.95rem;
+      color: var(--charcoal-light);
+    }
+
+    /* Contact Form */
+    .contact-form {
+      background: var(--white);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-form h3 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 28px;
+      color: var(--charcoal);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      border: 1.5px solid #E5E1DC;
+      border-radius: 10px;
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--charcoal);
+      background: var(--off-white);
+      transition: var(--transition);
+      outline: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(201,169,110,0.15);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      padding: 18px;
+      font-size: 1rem;
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      background: var(--charcoal);
+      color: var(--white);
+      padding: 80px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-brand .logo-text {
+      font-size: 1.3rem;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-social a {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: var(--gold);
+      color: var(--white);
+      transform: translateY(-3px);
+    }
+
+    .footer-column h4 {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .footer-column ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-column a {
+      font-size: 0.9rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    .footer-column a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      margin-top: 0;
+    }
+
+    .footer-bottom p {
+      font-size: 0.8rem;
+      color: rgba(255,255,255,0.35);
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      z-index: 900;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.6rem;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+      transition: var(--transition);
+      animation: pulse-whatsapp 2s infinite;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 30px rgba(37,211,102,0.5);
+    }
+
+    @keyframes pulse-whatsapp {
+      0%, 100% { box-shadow: 0 4px 20px rgba(37,211,102,0.4); }
+      50% { box-shadow: 0 4px 30px rgba(37,211,102,0.6); }
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 100px;
+      right: 32px;
+      z-index: 900;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--charcoal);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    /* ============================================
+       RESPONSIVE DESIGN
+       ============================================ */
+    @media (max-width: 1024px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .about-grid { grid-template-columns: 1fr; gap: 40px; }
+      .about-image { order: -1; }
+      .about-image img { height: 350px; }
+      .location-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section-padding { padding: 70px 0; }
+      .hero-content h1 { font-size: 2.2rem; }
+      .hero-highlights { gap: 24px; }
+      .hero-highlight-item { font-size: 0.8rem; }
+      .treatments-grid { grid-template-columns: 1fr; }
+      .gallery-grid { grid-template-columns: 1fr 1fr; }
+      .gallery-item:nth-child(1) { grid-row: span 1; }
+      .offers-grid { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .pricing-item { padding: 14px 16px; flex-wrap: wrap; gap: 8px; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+      .social-reel-item { flex: 0 0 280px; height: 380px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 { font-size: 1.8rem; }
+      .hero-buttons { flex-direction: column; align-items: center; }
+      .hero-highlights { flex-direction: column; align-items: center; }
+      .contact-form { padding: 28px 20px; }
+      .offer-card { padding: 28px; }
+      .gallery-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER / NAVIGATION
+       ============================================ -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">P</div>
+        <div class="logo-text">
+          Pearl Island
+          <span>Spa & Massage</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#treatments">Treatments</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#offers">Offers</a>
+        <a href="#testimonials">Reviews</a>
+        <a href="#location">Location</a>
+        <a href="#contact">Contact</a>
+        <!-- PLACEHOLDER: Replace # with your WhatsApp link e.g. https://wa.me/971XXXXXXXXX -->
+        <a href="https://wa.me/971XXXXXXXXX" target="_blank" class="btn btn-whatsapp nav-book-btn">
+          <i class="fab fa-whatsapp"></i> Book Now
+        </a>
+      </nav>
+
+      <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#treatments">Treatments</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#offers">Offers</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#location">Location</a>
+      <a href="#contact">Contact</a>
+      <!-- PLACEHOLDER: Replace # with your WhatsApp link -->
+      <a href="https://wa.me/971XXXXXXXXX" target="_blank" class="btn btn-whatsapp" style="margin-top:12px;">
+        <i class="fab fa-whatsapp"></i> Book on WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <span class="hero-label">Dubai's Premium Spa Experience</span>
+      <h1>Relax, Rejuvenate &amp; <em>Restore</em> at Pearl Island Spa</h1>
+      <p class="hero-subtitle">
+        Escape the city and indulge in expert massage therapy. From deep tissue relief to
+        luxurious aromatherapy — our skilled therapists craft every session around your body's needs.
+      </p>
+      <div class="hero-buttons">
+        <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+        <a href="https://wa.me/971XXXXXXXXX" target="_blank" class="btn btn-whatsapp">
+          <i class="fab fa-whatsapp"></i> Book on WhatsApp
+        </a>
+        <a href="#treatments" class="btn btn-secondary">
+          <i class="fas fa-spa"></i> View Treatments
+        </a>
+      </div>
+      <div class="hero-highlights">
+        <div class="hero-highlight-item">
+          <i class="fas fa-hands"></i> Expert Therapists
+        </div>
+        <div class="hero-highlight-item">
+          <i class="fas fa-gem"></i> Luxury Private Rooms
+        </div>
+        <div class="hero-highlight-item">
+          <i class="fas fa-clock"></i> Open Until 2 AM
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <main>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section class="about section-padding" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal-left">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=800&q=80" alt="Pearl Island Spa Interior - Luxurious massage room with warm ambient lighting">
+            <div class="about-image-badge">
+              <div class="badge-number">5+</div>
+              <div class="badge-text">Years in Dubai</div>
+            </div>
+          </div>
+          <div class="about-content reveal-right">
+            <span class="section-label">About Us</span>
+            <h2>A Sanctuary of Calm in the Heart of Dubai</h2>
+            <p>
+              Pearl Island Spa Massage is more than a spa — it's a personal retreat crafted for busy professionals,
+              tourists, and residents who deserve premium relaxation. We combine traditional techniques with modern
+              luxury in a hygienic, discreet, and deeply calming environment.
+            </p>
+            <div class="about-features">
+              <div class="about-feature">
+                <div class="about-feature-icon"><i class="fas fa-user-check"></i></div>
+                <div>
+                  <h4>Personalized Treatments</h4>
+                  <p>Every session is tailored to your body's unique tension points and preferences.</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div>
+                  <h4>Convenient Dubai Location</h4>
+                  <p>Easy access with parking, located near major landmarks and hotels.</p>
+                </div>
+              </div>
+              <div class="about-feature">
+                <div class="about-feature-icon"><i class="fas fa-leaf"></i></div>
+                <div>
+                  <h4>Serene Ambiance</h4>
+                  <p>Step into a world of aromatherapy, soft music, and warm lighting designed to melt stress away.</p>
+                </div>
+              </div>
+            </div>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-calendar-check"></i> Book Your Visit
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TREATMENTS SECTION
+         ============================================ -->
+    <section class="treatments section-padding" id="treatments">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Our Treatments</span>
+          <h2>Massage &amp; Spa Services</h2>
+          <p>Choose from our curated selection of therapies, each designed to relax, heal, and rejuvenate.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="treatments-grid">
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Full Body Relaxation Massage">
+              <span class="treatment-badge">Most Popular</span>
+            </div>
+            <div class="treatment-card-content">
+              <h3>Full Body Relaxation</h3>
+              <p>A soothing full-body massage using long, flowing strokes to ease tension and promote deep relaxation from head to toe.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 60 / 90 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="Thai Massage">
+            </div>
+            <div class="treatment-card-content">
+              <h3>Thai Massage</h3>
+              <p>An ancient healing art combining acupressure, stretching, and rhythmic compression to restore flexibility and energy flow.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 60 / 90 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80" alt="Deep Tissue Massage">
+              <span class="treatment-badge">Most Popular</span>
+            </div>
+            <div class="treatment-card-content">
+              <h3>Deep Tissue Massage</h3>
+              <p>Targeted pressure reaches deep muscle layers to release chronic tension, knots, and postural imbalances.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 60 / 90 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Hot Stone Massage">
+            </div>
+            <div class="treatment-card-content">
+              <h3>Hot Stone Therapy</h3>
+              <p>Heated basalt stones glide across your body, melting tension and promoting circulation for a deeply warming experience.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 60 / 90 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Aromatherapy Massage">
+            </div>
+            <div class="treatment-card-content">
+              <h3>Aromatherapy</h3>
+              <p>Essential oils selected for your mood are blended into a gentle massage, calming the mind while nourishing the skin.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 60 / 90 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80" alt="Couples Massage">
+            </div>
+            <div class="treatment-card-content">
+              <h3>Couples Massage</h3>
+              <p>Share a relaxing experience with your partner in our private couples suite, side by side in complete serenity.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 60 / 90 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1562574621-2c3a0d1090f0?w=600&q=80" alt="Foot Reflexology">
+            </div>
+            <div class="treatment-card-content">
+              <h3>Foot Reflexology</h3>
+              <p>Precise pressure on reflex points of the feet restores balance, improves circulation, and relieves everyday fatigue.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 45 / 60 minutes</span>
+            </div>
+          </div>
+
+          <div class="treatment-card reveal">
+            <div class="treatment-card-image">
+              <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=600&q=80" alt="Signature Pearl Island Package">
+              <span class="treatment-badge">Signature</span>
+            </div>
+            <div class="treatment-card-content">
+              <h3>Signature Pearl Island Package</h3>
+              <p>Our ultimate luxury experience: a curated blend of aromatherapy, hot stone, and deep tissue in one transformative session.</p>
+              <span class="treatment-duration"><i class="far fa-clock"></i> 120 minutes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         PRICING SECTION
+         ============================================ -->
+    <section class="pricing section-padding" id="pricing">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Pricing</span>
+          <h2>Transparent &amp; Fair Pricing</h2>
+          <p>All prices in AED. No hidden fees. Premium quality at every price point.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="pricing-content">
+          <!-- Relaxation Massages -->
+          <div class="pricing-category reveal">
+            <h3 class="pricing-category-title">Relaxation Massages</h3>
+            <div class="pricing-items">
+              <div class="pricing-item featured">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Full Body Relaxation</span>
+                  <span class="pricing-item-duration">60 min</span>
+                  <span class="pricing-item-recommend">Best Seller</span>
+                </div>
+                <span class="pricing-item-price">AED 250</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Full Body Relaxation</span>
+                  <span class="pricing-item-duration">90 min</span>
+                </div>
+                <span class="pricing-item-price">AED 350</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Aromatherapy Massage</span>
+                  <span class="pricing-item-duration">60 min</span>
+                </div>
+                <span class="pricing-item-price">AED 300</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Aromatherapy Massage</span>
+                  <span class="pricing-item-duration">90 min</span>
+                </div>
+                <span class="pricing-item-price">AED 420</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Foot Reflexology</span>
+                  <span class="pricing-item-duration">45 min</span>
+                </div>
+                <span class="pricing-item-price">AED 180</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Foot Reflexology</span>
+                  <span class="pricing-item-duration">60 min</span>
+                </div>
+                <span class="pricing-item-price">AED 230</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Specialty Massages -->
+          <div class="pricing-category reveal">
+            <h3 class="pricing-category-title">Specialty Massages</h3>
+            <div class="pricing-items">
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Deep Tissue Massage</span>
+                  <span class="pricing-item-duration">60 min</span>
+                </div>
+                <span class="pricing-item-price">AED 300</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Deep Tissue Massage</span>
+                  <span class="pricing-item-duration">90 min</span>
+                </div>
+                <span class="pricing-item-price">AED 420</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Thai Massage</span>
+                  <span class="pricing-item-duration">60 min</span>
+                </div>
+                <span class="pricing-item-price">AED 280</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Thai Massage</span>
+                  <span class="pricing-item-duration">90 min</span>
+                </div>
+                <span class="pricing-item-price">AED 400</span>
+              </div>
+              <div class="pricing-item featured">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Hot Stone Therapy</span>
+                  <span class="pricing-item-duration">60 min</span>
+                  <span class="pricing-item-recommend">Recommended</span>
+                </div>
+                <span class="pricing-item-price">AED 350</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Hot Stone Therapy</span>
+                  <span class="pricing-item-duration">90 min</span>
+                </div>
+                <span class="pricing-item-price">AED 480</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Packages -->
+          <div class="pricing-category reveal">
+            <h3 class="pricing-category-title">Packages &amp; Couples</h3>
+            <div class="pricing-items">
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Couples Massage</span>
+                  <span class="pricing-item-duration">60 min</span>
+                </div>
+                <span class="pricing-item-price">AED 500</span>
+              </div>
+              <div class="pricing-item">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Couples Massage</span>
+                  <span class="pricing-item-duration">90 min</span>
+                </div>
+                <span class="pricing-item-price">AED 700</span>
+              </div>
+              <div class="pricing-item featured">
+                <div class="pricing-item-left">
+                  <span class="pricing-item-name">Signature Pearl Island Package</span>
+                  <span class="pricing-item-duration">120 min</span>
+                  <span class="pricing-item-recommend">Best Value</span>
+                </div>
+                <span class="pricing-item-price">AED 650</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="pricing-note reveal">
+          Prices are indicative.
+          <a href="https://wa.me/971XXXXXXXXX" target="_blank">Contact us on WhatsApp</a>
+          for the latest offers and combo packages.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         SPECIAL OFFERS SECTION
+         ============================================ -->
+    <section class="offers section-padding" id="offers">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Special Offers</span>
+          <h2>Exclusive Deals for You</h2>
+          <p>Take advantage of our limited-time offers and treat yourself to luxury for less.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="offers-grid">
+          <div class="offer-card reveal">
+            <span class="offer-tag">Weekday Special</span>
+            <h3>Weekday Relax Package</h3>
+            <p>Enjoy a 90-minute Full Body Relaxation massage at a special rate during weekdays. The perfect midweek escape from the daily grind.</p>
+            <p class="offer-conditions">*Available Sunday–Wednesday, 10 AM – 4 PM. Subject to availability.</p>
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Weekday%20Relax%20Package" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Claim on WhatsApp
+            </a>
+          </div>
+
+          <div class="offer-card reveal">
+            <span class="offer-tag">For Couples</span>
+            <h3>Couples Retreat</h3>
+            <p>Book a 90-minute couples massage and receive complimentary aromatherapy upgrades for both guests. Romance and relaxation combined.</p>
+            <p class="offer-conditions">*Valid on all days. Advance booking required.</p>
+            <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Couples%20Retreat%20offer" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Claim on WhatsApp
+            </a>
+          </div>
+
+          <div class="offer-card reveal">
+            <span class="offer-tag">Happy Hour</span>
+            <h3>Late Night Happy Hour</h3>
+            <p>Visit between 10 PM and 2 AM and enjoy 15% off any 60-minute treatment. Wind down your evening with the ultimate relaxation.</p>
+            <p class="offer-conditions">*Cannot be combined with other offers. Walk-ins welcome.</p>
+            <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'm%20interested%20in%20the%20Happy%20Hour%20deal" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Claim on WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         GALLERY SECTION
+         ============================================ -->
+    <section class="gallery section-padding" id="gallery">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Gallery</span>
+          <h2>Step Inside Our Sanctuary</h2>
+          <p>A glimpse into the serene ambiance and premium treatments awaiting you.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="gallery-grid reveal">
+          <div class="gallery-item" data-index="0">
+            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=800&q=80" alt="Spa ambiance with candles and warm lighting">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="1">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Relaxing massage treatment in progress">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="2">
+            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Essential oils and aromatherapy setup">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="3">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80" alt="Luxury massage room with ambient decor">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="4">
+            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Hot stones prepared for treatment">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="5">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=600&q=80" alt="Spa products and zen arrangement">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="6">
+            <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80" alt="Couple enjoying spa treatment together">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="7">
+            <img src="https://images.unsplash.com/photo-1562574621-2c3a0d1090f0?w=600&q=80" alt="Foot reflexology treatment area">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+          <div class="gallery-item" data-index="8">
+            <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=600&q=80" alt="Tranquil spa interior design">
+            <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <span class="lightbox-close" id="lightboxClose">&times;</span>
+      <span class="lightbox-nav lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></span>
+      <img src="" alt="Gallery full view" id="lightboxImg">
+      <span class="lightbox-nav lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></span>
+    </div>
+
+    <!-- ============================================
+         SOCIAL MEDIA STRIP SECTION
+         ============================================ -->
+    <section class="social-strip" id="social">
+      <div class="social-strip-header">
+        <span class="section-label">Follow Our Journey</span>
+        <h2>Beauty, Wellness &amp; Lifestyle</h2>
+      </div>
+
+      <div class="social-reel" id="socialReel">
+        <div class="social-reel-item">
+          <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6d?w=500&q=80" alt="Spa lifestyle image">
+          <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="social-reel-item">
+          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=500&q=80" alt="Spa lifestyle image">
+          <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="social-reel-item">
+          <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?w=500&q=80" alt="Spa lifestyle image">
+          <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="social-reel-item">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&q=80" alt="Spa lifestyle image">
+          <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="social-reel-item">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80" alt="Spa lifestyle image">
+          <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+        <div class="social-reel-item">
+          <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=500&q=80" alt="Spa lifestyle image">
+          <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
+        </div>
+      </div>
+
+      <div class="social-handle">
+        <!-- PLACEHOLDER: Replace with actual Instagram URL -->
+        <a href="https://www.instagram.com/pearlislandspamassage/" target="_blank">
+          @pearlislandspamassage
+        </a>
+      </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS SECTION
+         ============================================ -->
+    <section class="testimonials section-padding" id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Testimonials</span>
+          <h2>What Our Guests Say</h2>
+          <p>Real experiences from real customers who found their peace at Pearl Island.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>Absolutely the best spa experience I've had in Dubai. The deep tissue massage was incredible — I walked out feeling like a new person. The ambiance is so calming and the staff is very professional.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">S</div>
+              <div class="testimonial-author-info">
+                <h4>Sarah M.</h4>
+                <span>Dubai Resident</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>My husband and I tried the couples massage and it was pure bliss. The private room, the oils, the attention to detail — everything was perfect. We'll definitely be coming back!</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">A</div>
+              <div class="testimonial-author-info">
+                <h4>Amira K.</h4>
+                <span>Tourist from London</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <p>I visit Pearl Island every week after work. The Thai massage is the real deal — perfect pressure and the therapists really know their craft. Highly recommend for anyone with back pain.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div class="testimonial-author-info">
+                <h4>Raj P.</h4>
+                <span>Business Professional</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>The Signature Pearl Island Package was worth every dirham. Two hours of pure luxury — from the hot stones to the aromatherapy finish. It's my go-to self-care treat now.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">L</div>
+              <div class="testimonial-author-info">
+                <h4>Layla H.</h4>
+                <span>Dubai Marina</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote-icon">&ldquo;</div>
+            <div class="testimonial-stars">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            </div>
+            <p>Found this gem through Instagram and wasn't disappointed. Clean, luxurious, and the foot reflexology was surprisingly effective. Love that they're open late — perfect after a long flight.</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div class="testimonial-author-info">
+                <h4>Marco T.</h4>
+                <span>Tourist from Italy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         LOCATION SECTION
+         ============================================ -->
+    <section class="location section-padding" id="location">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Find Us</span>
+          <h2>Our Location</h2>
+          <p>Conveniently located in the heart of Dubai, UAE.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-info reveal-left">
+            <h3>Visit Pearl Island Spa</h3>
+            <div class="location-details">
+              <div class="location-detail">
+                <i class="fas fa-map-marker-alt"></i>
+                <div>
+                  <h4>Address</h4>
+                  <!-- PLACEHOLDER: Replace with actual address -->
+                  <p>Al Barsha Street, Near Mall of the Emirates<br>Dubai, UAE</p>
+                </div>
+              </div>
+              <div class="location-detail">
+                <i class="fas fa-clock"></i>
+                <div>
+                  <h4>Opening Hours</h4>
+                  <p>Open Daily: 10:00 AM – 2:00 AM</p>
+                </div>
+              </div>
+              <div class="location-detail">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Phone</h4>
+                  <!-- PLACEHOLDER: Replace with actual phone number -->
+                  <p><a href="tel:+971XXXXXXXXX" style="color:var(--gold);">+971 XX XXX XXXX</a></p>
+                </div>
+              </div>
+              <div class="location-detail">
+                <i class="fas fa-parking"></i>
+                <div>
+                  <h4>Parking</h4>
+                  <p>Free parking available. Easy access from Sheikh Zayed Road.</p>
+                </div>
+              </div>
+            </div>
+            <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+            <a href="https://wa.me/971XXXXXXXXX?text=Hi!%20I'd%20like%20to%20get%20directions%20to%20Pearl%20Island%20Spa" target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> Get Directions on WhatsApp
+            </a>
+          </div>
+
+          <div class="map-container reveal-right">
+            <!-- PLACEHOLDER: Replace with actual Google Maps embed of your location -->
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.168505642546!2d55.19756!3d25.11773!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzA0LjAiTiA1NcKwMTEnNTEuMiJF!5e0!3m2!1sen!2sae!4v1700000000000!5m2!1sen!2sae"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Pearl Island Spa Massage Location">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT / BOOKING SECTION
+         ============================================ -->
+    <section class="contact section-padding" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Book Now</span>
+          <h2>Book Your Relaxing Escape</h2>
+          <p>Reach out through WhatsApp, phone, or fill in the form below. We'll get back to you within minutes.</p>
+          <div class="section-divider"></div>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-left reveal-left">
+            <h3>Get in Touch</h3>
+            <p>Whether you have a question about treatments, pricing, or availability — our team is ready to help you find the perfect session.</p>
+
+            <div class="contact-methods">
+              <!-- PLACEHOLDER: Replace all contact details with actual info -->
+              <a href="https://wa.me/971XXXXXXXXX" target="_blank" class="contact-method whatsapp">
+                <i class="fab fa-whatsapp"></i>
+                <div>
+                  <h4>WhatsApp (Fastest)</h4>
+                  <p>+971 XX XXX XXXX</p>
+                </div>
+              </a>
+              <a href="tel:+971XXXXXXXXX" class="contact-method phone">
+                <i class="fas fa-phone-alt"></i>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+971 XX XXX XXXX</p>
+                </div>
+              </a>
+              <!-- PLACEHOLDER: Replace with actual email -->
+              <a href="mailto:info@pearlislandspa.ae" class="contact-method email">
+                <i class="fas fa-envelope"></i>
+                <div>
+                  <h4>Email</h4>
+                  <p>info@pearlislandspa.ae</p>
+                </div>
+              </a>
+            </div>
+
+            <div class="contact-hours">
+              <h4><i class="far fa-clock" style="margin-right:6px;"></i> Opening Hours</h4>
+              <p>Open Daily — 10:00 AM to 2:00 AM<br><em style="font-size:0.85rem;opacity:0.7;">Last booking accepted at 1:00 AM</em></p>
+            </div>
+          </div>
+
+          <div class="contact-form reveal-right" id="bookingForm">
+            <h3>Quick Booking Request</h3>
+            <form id="contactForm" onsubmit="handleFormSubmit(event)">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input type="text" id="name" name="name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone / WhatsApp</label>
+                  <input type="tel" id="phone" name="phone" placeholder="+971 XX XXX XXXX" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="date">Preferred Date</label>
+                  <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                  <label for="time">Preferred Time</label>
+                  <input type="time" id="time" name="time" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="treatment">Treatment</label>
+                <select id="treatment" name="treatment" required>
+                  <option value="" disabled selected>Select a treatment</option>
+                  <option value="Full Body Relaxation">Full Body Relaxation</option>
+                  <option value="Thai Massage">Thai Massage</option>
+                  <option value="Deep Tissue Massage">Deep Tissue Massage</option>
+                  <option value="Hot Stone Therapy">Hot Stone Therapy</option>
+                  <option value="Aromatherapy">Aromatherapy</option>
+                  <option value="Couples Massage">Couples Massage</option>
+                  <option value="Foot Reflexology">Foot Reflexology</option>
+                  <option value="Signature Pearl Island Package">Signature Pearl Island Package</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea id="message" name="message" placeholder="Any special requests or questions..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary form-submit-btn">
+                <i class="fab fa-whatsapp"></i> Send Booking Request via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo-text">
+            Pearl Island
+            <span>Spa & Massage</span>
+          </div>
+          <p>Dubai's sanctuary of calm. Expert therapists, luxurious rooms, and a commitment to your well-being — open daily until 2 AM.</p>
+          <div class="footer-social">
+            <!-- PLACEHOLDER: Replace with actual social media links -->
+            <a href="https://www.instagram.com/pearlislandspamassage/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/971XXXXXXXXX" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#treatments">Treatments</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#treatments">Full Body Massage</a></li>
+            <li><a href="#treatments">Thai Massage</a></li>
+            <li><a href="#treatments">Deep Tissue</a></li>
+            <li><a href="#treatments">Hot Stone</a></li>
+            <li><a href="#treatments">Couples Massage</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Contact</h4>
+          <ul>
+            <!-- PLACEHOLDER: Replace all contact info -->
+            <li><a href="tel:+971XXXXXXXXX"><i class="fas fa-phone-alt" style="margin-right:8px;font-size:0.8rem;"></i>+971 XX XXX XXXX</a></li>
+            <li><a href="mailto:info@pearlislandspa.ae"><i class="fas fa-envelope" style="margin-right:8px;font-size:0.8rem;"></i>info@pearlislandspa.ae</a></li>
+            <li><a href="https://wa.me/971XXXXXXXXX" target="_blank"><i class="fab fa-whatsapp" style="margin-right:8px;font-size:0.8rem;"></i>WhatsApp Us</a></li>
+            <li><a href="#location"><i class="fas fa-map-marker-alt" style="margin-right:8px;font-size:0.8rem;"></i>Dubai, UAE</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Pearl Island Spa Massage. All rights reserved.</p>
+        <p>Designed with care in Dubai</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <!-- PLACEHOLDER: Replace with actual WhatsApp link -->
+  <a href="https://wa.me/971XXXXXXXXX" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </div>
+
+  <!-- ============================================
+       JAVASCRIPT
+       ============================================ -->
+  <script>
+    // ---- Sticky Header ----
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+      header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // ---- Mobile Menu ----
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ---- Scroll Reveal Animations ----
+    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealOnScroll = () => {
+      const windowHeight = window.innerHeight;
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        if (elementTop < windowHeight - 80) {
+          el.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // ---- Back to Top ----
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 500);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ---- Gallery Lightbox ----
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+    let currentImageIndex = 0;
+    const galleryImages = [];
+
+    galleryItems.forEach((item, index) => {
+      const img = item.querySelector('img');
+      galleryImages.push(img.src);
+      item.addEventListener('click', () => {
+        currentImageIndex = index;
+        lightboxImg.src = galleryImages[currentImageIndex];
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    lightboxPrev.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentImageIndex];
+    });
+
+    lightboxNext.addEventListener('click', (e) => {
+      e.stopPropagation();
+      currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+      lightboxImg.src = galleryImages[currentImageIndex];
+    });
+
+    // Keyboard navigation for lightbox
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') lightboxPrev.click();
+      if (e.key === 'ArrowRight') lightboxNext.click();
+    });
+
+    // ---- Social Reel Drag Scroll ----
+    const socialReel = document.getElementById('socialReel');
+    let isDown = false, startX, scrollLeft;
+
+    socialReel.addEventListener('mousedown', (e) => {
+      isDown = true;
+      socialReel.style.cursor = 'grabbing';
+      startX = e.pageX - socialReel.offsetLeft;
+      scrollLeft = socialReel.scrollLeft;
+    });
+
+    socialReel.addEventListener('mouseleave', () => { isDown = false; socialReel.style.cursor = 'grab'; });
+    socialReel.addEventListener('mouseup', () => { isDown = false; socialReel.style.cursor = 'grab'; });
+    socialReel.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - socialReel.offsetLeft;
+      const walk = (x - startX) * 2;
+      socialReel.scrollLeft = scrollLeft - walk;
+    });
+
+    // ---- Booking Form → WhatsApp ----
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const date = document.getElementById('date').value;
+      const time = document.getElementById('time').value;
+      const treatment = document.getElementById('treatment').value;
+      const message = document.getElementById('message').value;
+
+      const text = `Hello Pearl Island Spa! 🌿\n\n` +
+        `*Booking Request:*\n` +
+        `Name: ${name}\n` +
+        `Phone: ${phone}\n` +
+        `Date: ${date}\n` +
+        `Time: ${time}\n` +
+        `Treatment: ${treatment}\n` +
+        (message ? `Message: ${message}\n` : '') +
+        `\nLooking forward to my visit!`;
+
+      // PLACEHOLDER: Replace 971XXXXXXXXX with actual WhatsApp number
+      const whatsappUrl = `https://wa.me/971XXXXXXXXX?text=${encodeURIComponent(text)}`;
+      window.open(whatsappUrl, '_blank');
+    }
+
+    // ---- Set min date for booking form ----
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+      const today = new Date().toISOString().split('T')[0];
+      dateInput.setAttribute('min', today);
+    }
+
+    // ---- Smooth scroll for active nav highlighting ----
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a:not(.btn)');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (window.scrollY >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+      navLinks.forEach(link => {
+        link.style.color = '';
+        if (link.getAttribute('href') === '#' + current) {
+          link.style.color = header.classList.contains('scrolled') ? 'var(--gold)' : 'var(--gold-light)';
+        }
+      });
+    });
+
+    // ---- Social reel auto-scroll on load ----
+    socialReel.style.cursor = 'grab';
+  </script>
+
+</body>
+</html>
