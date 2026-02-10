@@ -412,15 +412,80 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background:
-        linear-gradient(180deg, rgba(26,26,26,0.4) 0%, rgba(26,26,26,0.5) 50%, rgba(26,26,26,0.7) 100%),
-        url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=80') center/cover no-repeat;
       transform: scale(1.05);
       transition: transform 8s ease;
     }
 
     .hero:hover .hero-bg {
       transform: scale(1);
+    }
+
+    /* Hero Slideshow */
+    .hero-slideshow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+
+    .hero-slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transform: scale(1.05);
+      transition: opacity 1.5s ease-in-out, transform 8s ease;
+    }
+
+    .hero-slide.active {
+      opacity: 1;
+    }
+
+    .hero-slide::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(26,26,26,0.4) 0%, rgba(26,26,26,0.5) 50%, rgba(26,26,26,0.7) 100%);
+    }
+
+    /* Hero slide indicators */
+    .hero-indicators {
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      gap: 12px;
+    }
+
+    .hero-indicator {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.4);
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      padding: 0;
+    }
+
+    .hero-indicator.active {
+      background: var(--gold-light);
+      transform: scale(1.3);
+    }
+
+    .hero-indicator:hover {
+      background: rgba(255,255,255,0.8);
     }
 
     .hero-content {
@@ -1740,7 +1805,20 @@
        HERO SECTION
        ============================================ -->
   <section class="hero" id="home">
-    <div class="hero-bg"></div>
+    <div class="hero-slideshow" id="heroSlideshow">
+      <div class="hero-slide active" style="background-image: url('https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1570174006460-406fed1f4778?w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image: url('https://plus.unsplash.com/premium_photo-1661274213751-0ccaaffdecac?w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1592304346250-ef7244f8c9cc?w=1920&q=80')"></div>
+      <div class="hero-slide" style="background-image: url('https://images.unsplash.com/photo-1670201202784-ec638a82bca8?w=1920&q=80')"></div>
+    </div>
+    <div class="hero-indicators" id="heroIndicators">
+      <button class="hero-indicator active" data-slide="0" aria-label="Slide 1"></button>
+      <button class="hero-indicator" data-slide="1" aria-label="Slide 2"></button>
+      <button class="hero-indicator" data-slide="2" aria-label="Slide 3"></button>
+      <button class="hero-indicator" data-slide="3" aria-label="Slide 4"></button>
+      <button class="hero-indicator" data-slide="4" aria-label="Slide 5"></button>
+    </div>
     <div class="hero-content">
       <span class="hero-label">Dubai's Premium Spa Experience</span>
       <h1>Relax, Rejuvenate &amp; <em>Restore</em> at Pearl Island Spa</h1>
@@ -1844,7 +1922,7 @@
         <div class="treatments-grid">
           <div class="treatment-card reveal">
             <div class="treatment-card-image">
-              <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Full Body Relaxation Massage">
+              <img src="https://images.unsplash.com/photo-1542848284-8afa78a08ccb?w=600&q=80" alt="Full Body Relaxation Massage">
               <span class="treatment-badge">Most Popular</span>
             </div>
             <div class="treatment-card-content">
@@ -1879,7 +1957,7 @@
 
           <div class="treatment-card reveal">
             <div class="treatment-card-image">
-              <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=600&q=80" alt="Hot Stone Massage">
+              <img src="https://images.unsplash.com/photo-1592304346250-ef7244f8c9cc?w=600&q=80" alt="Hot Stone Massage">
             </div>
             <div class="treatment-card-content">
               <h3>Hot Stone Therapy</h3>
@@ -1890,7 +1968,7 @@
 
           <div class="treatment-card reveal">
             <div class="treatment-card-image">
-              <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Aromatherapy Massage">
+              <img src="https://images.unsplash.com/photo-1670201202784-ec638a82bca8?w=600&q=80" alt="Aromatherapy Massage">
             </div>
             <div class="treatment-card-content">
               <h3>Aromatherapy</h3>
@@ -1901,7 +1979,7 @@
 
           <div class="treatment-card reveal">
             <div class="treatment-card-image">
-              <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Facial Massage for Men">
+              <img src="https://plus.unsplash.com/premium_photo-1661274213751-0ccaaffdecac?w=600&q=80" alt="Facial Massage for Men">
             </div>
             <div class="treatment-card-content">
               <h3>Facial Massage</h3>
@@ -1912,7 +1990,7 @@
 
           <div class="treatment-card reveal">
             <div class="treatment-card-image">
-              <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80" alt="Foot Reflexology">
+              <img src="https://images.unsplash.com/photo-1570174006460-406fed1f4778?w=600&q=80" alt="Foot Reflexology">
             </div>
             <div class="treatment-card-content">
               <h3>Foot Reflexology</h3>
@@ -2148,39 +2226,39 @@
 
         <div class="gallery-grid reveal">
           <div class="gallery-item" data-index="0">
-            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80" alt="Man receiving a back massage at the spa">
+            <img src="https://images.unsplash.com/photo-1542848284-8afa78a08ccb?w=800&q=80" alt="Man receiving a relaxing back massage at the spa">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="1">
-            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=600&q=80" alt="Man receiving therapeutic massage treatment">
+            <img src="https://images.unsplash.com/photo-1570174006460-406fed1f4778?w=600&q=80" alt="Man receiving foot reflexology treatment">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="2">
-            <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=600&q=80" alt="Man relaxing during aromatherapy massage">
+            <img src="https://plus.unsplash.com/premium_photo-1661274213751-0ccaaffdecac?w=600&q=80" alt="Man receiving facial massage at spa">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="3">
-            <img src="https://images.unsplash.com/photo-1591343395082-e120087004b4?w=600&q=80" alt="Man enjoying relaxing back massage in spa">
+            <img src="https://images.unsplash.com/photo-1592304346250-ef7244f8c9cc?w=600&q=80" alt="Man enjoying hot stone therapy massage">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="4">
-            <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=600&q=80" alt="Male client receiving hot stone massage">
+            <img src="https://images.unsplash.com/photo-1670201202784-ec638a82bca8?w=600&q=80" alt="Man receiving facial treatment with brush">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="5">
-            <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80" alt="Male client on massage table">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=600&q=80" alt="Man enjoying relaxing back massage in spa">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="6">
-            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=600&q=80" alt="Man receiving facial massage at spa">
+            <img src="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=600&q=80" alt="Man receiving Thai massage treatment">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="7">
-            <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=600&q=80" alt="Male client receiving leg massage">
+            <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=600&q=80" alt="Man receiving deep tissue massage">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
           <div class="gallery-item" data-index="8">
-            <img src="https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?w=600&q=80" alt="Bearded man receiving spa treatment">
+            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=600&q=80" alt="Signature Pearl Island spa treatment">
             <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
           </div>
         </div>
@@ -2206,27 +2284,27 @@
 
       <div class="social-reel" id="socialReel">
         <div class="social-reel-item">
-          <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=500&q=80" alt="Spa lifestyle image">
+          <img src="https://images.unsplash.com/photo-1542848284-8afa78a08ccb?w=500&q=80" alt="Back massage spa treatment">
           <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="social-reel-item">
-          <img src="https://images.unsplash.com/photo-1507652313519-d4e9174996dd?w=500&q=80" alt="Spa lifestyle image">
+          <img src="https://images.unsplash.com/photo-1570174006460-406fed1f4778?w=500&q=80" alt="Foot reflexology treatment">
           <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="social-reel-item">
-          <img src="https://images.unsplash.com/photo-1531299204812-e6d44d9a185c?w=500&q=80" alt="Spa lifestyle image">
+          <img src="https://plus.unsplash.com/premium_photo-1661274213751-0ccaaffdecac?w=500&q=80" alt="Facial massage treatment">
           <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="social-reel-item">
-          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=500&q=80" alt="Spa lifestyle image">
+          <img src="https://images.unsplash.com/photo-1592304346250-ef7244f8c9cc?w=500&q=80" alt="Hot stone therapy">
           <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="social-reel-item">
-          <img src="https://images.unsplash.com/photo-1596178060671-7a80dc8059ea?w=500&q=80" alt="Spa lifestyle image">
+          <img src="https://images.unsplash.com/photo-1670201202784-ec638a82bca8?w=500&q=80" alt="Facial treatment with brush">
           <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
         </div>
         <div class="social-reel-item">
-          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=500&q=80" alt="Spa lifestyle image">
+          <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=500&q=80" alt="Relaxing spa massage">
           <div class="social-reel-overlay"><i class="fab fa-instagram"></i></div>
         </div>
       </div>
@@ -2749,6 +2827,38 @@
 
     // ---- Social reel auto-scroll on load ----
     socialReel.style.cursor = 'grab';
+
+    // ---- Hero Slideshow ----
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroIndicators = document.querySelectorAll('.hero-indicator');
+    let currentSlide = 0;
+    let heroInterval;
+
+    function goToSlide(index) {
+      heroSlides[currentSlide].classList.remove('active');
+      heroIndicators[currentSlide].classList.remove('active');
+      currentSlide = index;
+      heroSlides[currentSlide].classList.add('active');
+      heroIndicators[currentSlide].classList.add('active');
+    }
+
+    function nextSlide() {
+      goToSlide((currentSlide + 1) % heroSlides.length);
+    }
+
+    function startSlideshow() {
+      heroInterval = setInterval(nextSlide, 5000);
+    }
+
+    heroIndicators.forEach(indicator => {
+      indicator.addEventListener('click', () => {
+        clearInterval(heroInterval);
+        goToSlide(parseInt(indicator.dataset.slide));
+        startSlideshow();
+      });
+    });
+
+    startSlideshow();
   </script>
 
 </body>
